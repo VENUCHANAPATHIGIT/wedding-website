@@ -57,6 +57,38 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<title>Play a Song</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            position: relative; /* Needed for absolute positioning of buttons */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px; /* Add margin for spacing */
+            border: none;
+            border-radius: 5px;
+        }
+        #playButton {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        #stopButton {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        #topRightButtons {
+            position: absolute; /* Positioning the buttons */
+            top: 10px; /* Distance from the top */
+            right: 10px; /* Distance from the right */
+            display: flex; /* To align buttons horizontally */
+            gap: 5px; /* Space between buttons */
+        }
+    </style>
 	</head>
 	<body>
 		
@@ -138,7 +170,7 @@
 									<h3>Wedding</h3>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>29 October 2023</span>
+										<span>29 October 2024</span>
 									</div>
 									<div class="event-col">
 
@@ -250,5 +282,15 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<center>View Source Code on <a href="https://github.com/shyamjos/wedding-website">GitHub <img src="images/github-logo.png"> </a> </center>
+
+	<h1>Click to Play a Song</h1>
+    <audio id="audioPlayer" src="./assets/mp3/song.mp3"></audio>
+    <div>
+        <button id="playButton" onclick="playAudio()">Play Song</button>
+        <button id="stopButton" onclick="stopAudio()">Stop Song</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+
 	</body>
 </html>
